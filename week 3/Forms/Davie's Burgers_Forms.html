@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <link href="https://fonts.googleapis.com/css?family=Rubik" rel="stylesheet">
+  <title>HTML Forms</title>
+</head>
+
+<body>
+  <section id="overlay">
+    <img src="https://cdn.akamai.steamstatic.com/steam/apps/730840/capsule_616x353.jpg" alt="Davie's Burgers Logo" id="logo">
+    <hr>
+    <!--Add your code below-->
+    <form action="/practice.html" method="POST">
+      <h1>This is a burger site</h1>
+      <p>Get your burgers whilst they're hot!</p>
+
+      <section id="login-information">
+        <label for="username">Username</label>
+        <input id="username" type="text" name="username">
+        <br>
+        <label for="password">Password</label>
+        <input id="password" type="text" name="password">
+      </section>
+
+      <section id="protein">
+        <label for="patty">What type of protein would you like?</label>
+        <input type="text" name="patty" id="patty" value="beef">
+      </section>
+
+      <section id="patties">
+        <label for="amount">How many patties wouls you like?</label>
+        <input id="amount" type="number" name="amount">
+      </section>
+
+      <section class="cooked">
+        <label for="doneness">How do you want your burger cooked?</label>
+        <br>
+        <span>Rare</span>
+        <input type="range" id="doneness" name="doneness" min="0" max="5" step="0.5">
+
+        <span>Well-Done</span>
+
+        <section class="toppings">
+          
+          <input id="lettuce" name="topping" type="checkbox" value="lettuce">
+          <label for="lettuce">Lettuce</label>
+          <br>
+          
+          <input id="tomatoes" name="topping" type="checkbox" value="tomatoes">
+          <label for="tomatoes">Tomatoes</label>
+          <br>
+          
+          <input id="onion" name="topping" type="checkbox" value="onion">
+          <label for="onion">Onion</label>
+        </section>
+
+        <section class="cheesy">
+          <span>Would you like to add cheese?</span>
+          <br>
+
+          
+          <input id="yes" type="radio" name="cheese">
+          <label for="yes">Yes</label>
+          
+          <input id="no" type="radio" name="cheese">
+          <label for="no">No</label>
+        </section>
+
+        <section class="bun-type">
+          <label for="bun">What type of bun would you like?</label>
+          <select id="bun" name="bun">
+            <option value="sesame">Sesame</option>
+            <option value="brioche">Brioche</option>
+            <option value="gluten-free">Gluten-Free</option>
+          </select>
+        </section>
+
+        <section class="submission">
+          <input type="submit" value="Submit">
+        </section>
+      </section>
+    </form>
+  </section>
+</body>
+</html>

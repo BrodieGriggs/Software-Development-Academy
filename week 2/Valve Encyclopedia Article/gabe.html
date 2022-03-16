@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gabe is Love</title>
+
+  <style>
+    body {
+      /* change background to linear gradient */
+      background: linear-gradient(30deg, #e66465, #9198e5);
+    }
+
+    .image-grid-container {
+      /* fit element to height of browser window */
+      height: 98vh;
+
+      /* change display type to grid and make a 2 column template to
+         hold the 4 images of gabe */
+      display: grid;
+      grid-gap: 10px;
+      grid-template-columns: 1fr 1fr;
+    }
+    .gabe-image {
+      /* make each image 100% the size of its container */
+      width: 100%;
+      height: 100%;
+    }
+  </style>
+</head>
+<body>
+  <!-- class names are pretty self- explanatory -->
+  <div class="image-grid-container">
+    <div class="image-container">
+      <img class="gabe-image" src="res/gabe-happy.jpg" alt="Gabe Newell looking happy" />
+    </div>
+    <div class="image-container">
+      <img class="gabe-image" src="res/gabe-intense.gif" alt="Gabe Newell looking intense" />
+    </div>
+    <div class="image-container">
+      <img class="gabe-image" src="res/gabe-sparkle.gif" alt="Gabe Newell looking sparkly" />
+    </div>
+    <div class="image-container">
+      <img class="gabe-image" src="res/gabe-steam-sales.gif" alt="Gabe Newell looking rich" />
+    </div>
+  </div>
+</body>
+</html>
