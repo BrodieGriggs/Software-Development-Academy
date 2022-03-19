@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>TechTalent Academy Coding Festival</title>
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet">
+
+    <!-- add and change global styles to match brief -->
+    <style>
+      body { /* remove body margin to allow header to span the full
+                window width */
+        margin: 0px;
+      }
+      th, td { /* make table data uppercase and adjust height of table
+                  cells */
+        height: 80px;
+        text-transform: uppercase;
+      }
+      h3 { /* change styling of h3 element for use in the 2 table column
+              headings */
+        text-align: center;
+        margin: 0px auto;
+      }
+      .event-data { /* the table data under the heading "event" is
+                       left-aligned in the brief */
+        text-align: left;
+        padding-left: 25px;
+      }
+      footer {
+        margin: 10px auto;
+        position: relative;
+      }
+      .footer-link { /* styling for footer links to match brief */
+        color: white;
+        text-decoration: none;
+        text-transform: uppercase;
+        font-size: 10px;
+        margin: 0px 20px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <header>
+      <!-- span added for marking criteria, in this case used to
+           select the academy name with a class for potential styling
+           interactive features -->
+      <h1><span class="academy-name">TechTalent Academy</span> Coding Festival</h1>
+    </header>
+    
+    <main>
+      <!-- Use CSS Grid to easily resize and position the table -->
+      <div id="table-container" style="display: grid;">
+        <table style="width: 80%; align-self: center;">
+          <!-- Set the width of columns to match the brief -->
+          <colgroup>
+            <col span="1" style="width:30%;">
+            <col span="1" style="width:35%;">
+            <col span="1" style="width:35%;">
+          </colgroup>
+
+          <!-- Table Heading -->
+          <thead>
+            <tr>
+              <th scope="col" colspan="3">
+                <!-- add styling to match brief -->
+                <h2 id="table-heading" style="
+                background-color: white;
+                color: #8c6b48;
+                font-size: 30px;
+                text-transform: capitalize;">
+                  Workshop Schedule
+                </h2>
+              </th>
+            </tr>
+          
+            <!-- Table Column Headings -->
+            <tr>
+              <th scope="col"><h3>Time</h3></th>
+              <th scope="col"><h3>Saturday</h3></th>
+              <th scope="col"><h3>Sunday</h3></th>
+            </tr>
+        </thead>
+
+        <tbody>
+          <!-- Table Data -->
+          <!-- Add class for event column data to select for styles -->
+          <tr>
+            <td>11:00pm</td>
+            <td class="event-data"></td>
+            <td class="event-data" rowspan="4">Python 101</td>
+          </tr>
+          <tr>
+            <td>12:00pm</td>
+            <td class="event-data">Welcome to the festival</td>
+          </tr>
+          <tr>
+            <td>01:00pm</td>
+            <td class="event-data">Python 101</td>
+          </tr>
+          <tr>
+            <td>02:00pm</td>
+            <td class="event-data">Keeping you cyber-secure</td>
+          </tr>
+          <tr>
+            <td>03:00pm</td>
+            <td class="event-data">The www and html</td>
+            <td class="event-data">CV Workshop</td>
+          </tr>
+          <tr>
+            <td>04:00pm</td>
+            <td class="event-data">Group project</td>
+            <td class="event-data">Group project</td>
+          </tr>
+          <tr>
+            <td>05:00pm</td>
+            <td class="event-data"></td>
+            <td class="event-data">Festival closing speech</td>
+          </tr>
+        </tbody>
+        </table>
+      </div>
+    </main>
+
+    <footer>
+      <!-- Navigation links visible in brief-->
+      <a class="footer-link" href="">Contact</a>
+      <a class="footer-link" href="">Location</a>
+      <a class="footer-link" href="">Privacy Policy</a>
+    </footer>
+  </body>
+</html>

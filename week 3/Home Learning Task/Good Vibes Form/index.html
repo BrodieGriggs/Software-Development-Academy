@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Good Vibes</title>
+
+  <!--
+  <link rel="stylesheet" type="text/css" href="style.css" />
+  -->
+
+  <!-- Link google fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+
+  <!-- css styling -->
+  <style>
+    :root {
+      /* variables for colour scheme */
+      --form-background-colour: rgb(255, 255, 255);
+      --text-colour-1: rgb(78, 78, 78);
+      --shadow-colour: rgb(0, 0, 0);
+      --text-colour-2: rgb(192, 37, 223);
+      --gradient-colour-1: rgb(197,44,64);
+      --gradient-colour-2: rgb(195,197,255);
+    }
+    body {
+      /* set default font size in order to use 'em' units for the rest of the document. */
+      font-size: 10px;
+      font-family: 'Rubik', sans-serif;
+      color: var(--text-colour-1);
+      margin: 0px;
+
+      /* gradient background */
+      background-image: linear-gradient(to top right, var(--gradient-colour-1), var(--gradient-colour-2));
+      background-size: contain;
+      background-repeat: no-repeat;
+
+      /* make sure gradient covers the whole window */
+      height: 100vh;
+      overflow: hidden;
+    }
+    main { /* display grid to allow intuitive positioning of form container */
+      display: grid;
+      height: 100%;
+      width: 100%;
+    }
+    .form-container { 
+      align-self: center;
+      justify-self: center;
+      margin-top: 5em; /* shift form down slightly to show title */
+      width: 80%;
+      min-width: 65em;
+      max-width: 100em;
+      background-color: var(--form-background-colour);
+      border-radius: 3em;
+      box-shadow: 0 0 2em var(--shadow-colour) inset;
+
+      /* display grid to allow intuitive positioning of form elements */
+      display: grid;
+      justify-items: center;
+      gap: 5em; /* gap between 'tell us something...' and the form elements */
+    }
+    form, p {
+      text-align: center;
+      margin: 1em;
+    }
+    p {
+      margin-bottom: 0;
+      font-size: 2.5em;
+    }
+    h1 { /* page title ('Good Vibes') */
+      position: absolute;
+      top: 0;
+      left: 0;
+      font-family: 'Rubik', sans-serif;
+      font-size: 15em;
+      margin: 0;
+      margin-top: 0.02em;
+      letter-spacing: -0.06em;
+      line-height: 0.8em;
+      color: white;
+      z-index: -1;
+    }
+    section {
+      margin: 0 5em 0 1em
+    }
+    .form-row {
+      margin: 1em auto;
+      display: grid;
+      grid-template-columns: 1fr 2fr;
+      align-items: center;
+    }
+    .label, .form-row > p {
+      font-size: 2.5em;
+      text-align: right;
+      margin: 0;
+      margin-right: 1em;
+    }
+    .text-field {
+      font-size: 2em;
+      border-radius: 1em;
+      padding: 0.2em 0.5em;
+    }
+    .drop-down {
+      font-size: 2em;
+      padding: 0.2em 0.5em;
+      border-radius: 1em;
+    }
+    .radio-options-container, .checkbox-options-container {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      justify-items: left;
+      align-items: center;
+    }
+    .radio-option, .checkbox-option {
+      text-align: left;
+      margin: 0.25em auto;
+      width: 100%;
+      display:grid;
+      grid-template-columns: 3em auto;
+      align-items: center;
+      justify-items: left;
+    }
+    textarea {
+      font-size: 2em;
+      font-family: 'Rubik', sans-serif;
+      padding: 0.2em 0.5em;
+      border-radius: 1em;
+      resize: none;
+      height: 4em
+    }
+    .submit-button {
+      position: relative;
+      overflow: hidden;
+      font-size: 2.5em;
+      font-weight: 600;
+      font-family: 'Rubik', sans-serif;
+      padding: 0.5em 0.7em;
+      margin: 0.5em auto;
+      border-radius: 1em;
+
+      background-image: linear-gradient(to top right, var(--gradient-colour-2), var(--gradient-colour-1));
+      color: var(--form-background-colour);
+      border: none;
+    }
+    .submit-button:hover {
+      cursor: pointer;
+      filter: drop-shadow(0 0 0.2em var(--shadow-colour))
+    }
+    footer {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+    }
+    footer > p {
+      margin: 0;
+      color: var(--background-text-colour);
+      font-weight: 100;
+      text-align: left;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Page heading -->
+  <h1 id="title">Good Vibes</h1>
+  <main>
+    <!-- div containing the form -->
+    <div class="form-container">
+      <p>
+        Tell us something positive that happened to
+        <span style="font-weight: bold; color:var(--text-colour-2); text-transform: uppercase;">you</span> today!
+      </p>
+
+      <!-- since I have nowhere to send the form data to, I have just set it
+           to go to my website (under construction)-->
+      <!-- all of the form inputs are set to required and will not let the user
+           continue without filling out all fields -->
+      <form action="http://www.brodiegriggs.co.uk">
+
+        <!-- Client contact details section -->
+        <!-- Contact details section contains 2 text fields, one for the name
+             and one for the email address -->
+        <section id="contact-details" style="margin-top: 0;">
+          <div class="form-row">
+            <label class="label" for="client-name">Name</label>
+            <input class="text-field" id="client-name" name="client-name" type="text" placeholder="Enter your name" required>
+          </div>
+          <div class="form-row">
+            <label class="label" for="client-email">Email</label>
+            <input class="text-field" id="client-email" name="client-email" type="text" placeholder="Enter your email address" required>
+          </div>
+        </section>
+
+        <!-- Good vibe details section -->
+        <section id="good-vibe-details">
+          
+          <!-- 'How good was it?' -->
+          <!-- This section uses a range (slider) input -->
+          <!-- Slider can produce values from 1-10, values are displayed to the user by editing
+               the value of the next element sibling, which is an <output> element. The value of
+               the output element is set to the slider's value, concatenated with ' / 10' to give
+               the user's selected value out of 10. (eg. '7 / 10') -->
+          <div class="form-row">
+            <label class="label" for="rating">How good was it?</label>
+            <div id="slider-container" style="display: grid; grid-template-columns: auto 13em;">
+              <input id="rating" name="rating" type="range" value="5" min="1" max="10" oninput="this.nextElementSibling.value = this.value + ' / 10'">
+              <output style="font-size: 3em; margin-left: 1em; text-align: right;">5 / 10</output>
+            </div>
+          </div>
+
+          <!-- 'At what time of day did it occur?' -->
+          <!-- This section uses a select tag (drop-down) -->
+          <div class="form-row">
+            <label for="time-of-day" class="label">At what time of day did it occur?</label>
+            <select id="time-of-day" class="drop-down" name="time-of-day">
+              <option value="morning">Morning</option>
+              <option value="afternoon">Afternoon</option>
+              <option value="evening">Evening</option>
+            </select>
+          </div>
+
+          <!-- 'Where did it occur?'-->
+          <!-- This section uses a radio input -->
+          <!-- divs have been added to group together each input with its label, and the whole
+               group of options in order to maintain the format of the form and aid readability -->
+          <!-- The 'other' option also has a text field for the user to specify the answer. If
+               this option is chosen, 'other-reason' the text field is given the required attribute.
+               however if either of the other two options are selected, the 'other-reason' is not
+               required -->
+          <div class="form-row">
+            <p style="text-align: right; user-select: none;">Where did it occur?</p>
+            <div class="radio-options-container">
+              <div class="radio-option">
+                <input id="at-home" class="radio" name="where" type="radio" value="at-home" oninput="document.getElementById('other-reason').required = false;">
+                <label for="at-home" class="label">At home</label>
+              </div>
+              <div class="radio-option">
+                <input id="at-work" class="radio" name="where" type="radio" value="at-work" oninput="document.getElementById('other-reason').required = false;">
+                <label for="at-work" class="label">At work</label>
+              </div>
+              <div class="radio-option" style="grid-column: 1 / 3; display: grid; grid-template-columns: 3em 10em auto;">
+                <input id="other" type="radio" name="where" value="other" oninput="document.getElementById('other-reason').required = true;">
+                <label for="other" class="label">Other</label>
+                <input id="other-reason" type="text" name="other-reason" placeholder="Please specify..." class="text-field">
+              </div>
+            </div>
+          </div>
+
+          <!-- 'What emotions did you experience?'-->
+          <!-- This section uses a checkbox input -->
+          <!-- 'Excited' is checked by default -->
+          <!-- I searched for a way to require that at least one option has been selected,
+               however I couldn't find any that didn't include writing functions in js, which
+               seemed beyond the scope of this HLT -->
+          <!-- divs have been added to group together each input with its label, and the whole
+               group of options in order to maintain the format of the form and aid readability -->
+          <div class="form-row">
+            <p >What emotions did you experience?</p>
+            <div class="checkbox-options-container">
+              <div class="checkbox-option">
+                <input id="excited" name="excited" type="checkbox" checked>
+                <label for="excited" class="label">Excited</label>
+              </div>
+              <div class="checkbox-option">
+                <input id="humbled" name="humbled" type="checkbox">
+                <label for="humbled" class="label">Humbled</label>
+              </div>
+              <div class="checkbox-option">
+                <input id="elated" name="elated" type="checkbox">
+                <label for="elated" class="label">Elated</label>
+              </div>
+              <div class="checkbox-option">
+                <input id="loved" name="loved" type="checkbox">
+                <label for="loved" class="label">Loved</label>
+              </div>
+              <div class="checkbox-option">
+                <input id="enthusiastic" name="enthusiastic" type="checkbox">
+                <label for="enthusiastic" class="label">Enthusiastic</label>
+              </div>
+            </div>
+          </div>
+
+          <!-- 'What emotions did you experience?'-->
+          <!-- This section uses a textarea tag -->
+          <div class="form-row">
+            <label for="description" class="label">Please describe your experience.</label>
+            <textarea id="description" name="description" placeholder="Describe your experience here..."></textarea>
+          </div>
+        </section>
+        <!-- submit button -->
+        <input id="submit" type="submit" value="Submit" class="submit-button">
+      </form>
+    </div>
+  </main>
+  <footer>
+    <!-- good vibes text at the bottom of the page -->
+    <p style="color: rgba(255, 255, 255, 0.1); width: 10000em">good vibes good vibes good vibes good vibes good vibes good vibes good vibes good vibes good vibes good vibes good vibes good vibes good vibes good vibes good vibes good vibes good vibes good vibes good vibes good vibes good vibes good vibes good vibes good vibes good vibes good vibes good vibes good vibes good vibes good vibes good vibes good vibes good vibes good vibes good vibes good vibes good vibes good vibes good vibes good vibes good vibes good vibes </p>
+    <p style="color: rgba(255, 255, 255, 0.3); width: 10000em">vibes good vibes good vibes good vibes good vibes good vibes good vibes good vibes good vibes good vibes good vibes good vibes good vibes good vibes good vibes good vibes good vibes good vibes good vibes good vibes good vibes good vibes good vibes good vibes good vibes good vibes good vibes good vibes good vibes good vibes good vibes good vibes good vibes good vibes good vibes good vibes good vibes good vibes good vibes good vibes good vibes good vibes</p>
+    <p style="color: rgba(255, 255, 255, 0.5); width: 10000em">good vibes good vibes good vibes good vibes good vibes good vibes good vibes good vibes good vibes good vibes good vibes good vibes good vibes good vibes good vibes good vibes good vibes good vibes good vibes good vibes good vibes good vibes good vibes good vibes good vibes good vibes good vibes good vibes good vibes good vibes good vibes good vibes good vibes good vibes good vibes good vibes good vibes good vibes good vibes good vibes good vibes good vibes</p>
+    <p style="color: rgba(255, 255, 255, 0.7); width: 10000em">vibes good vibes good vibes good vibes good vibes good vibes good vibes good vibes good vibes good vibes good vibes good vibes good vibes good vibes good vibes good vibes good vibes good vibes good vibes good vibes good vibes good vibes good vibes good vibes good vibes good vibes good vibes good vibes good vibes good vibes good vibes good vibes good vibes good vibes good vibes good vibes good vibes good vibes good vibes good vibes good vibes good vibes</p>
+    <p style="color: rgba(255, 255, 255, 0.8); width: 10000em">good vibes good vibes good vibes good vibes good vibes good vibes good vibes good vibes good vibes good vibes good vibes good vibes good vibes good vibes good vibes good vibes good vibes good vibes good vibes good vibes good vibes good vibes good vibes good vibes good vibes good vibes good vibes good vibes good vibes good vibes good vibes good vibes good vibes good vibes good vibes good vibes good vibes good vibes good vibes good vibes good vibes good vibes</p>
+    <p style="color: rgba(255, 255, 255, 0.9); width: 10000em">vibes good vibes good vibes good vibes good vibes good vibes good vibes good vibes good vibes good vibes good vibes good vibes good vibes good vibes good vibes good vibes good vibes good vibes good vibes good vibes good vibes good vibes good vibes good vibes good vibes good vibes good vibes good vibes good vibes good vibes good vibes good vibes good vibes good vibes good vibes good vibes good vibes good vibes good vibes good vibes good vibes good vibes</p>
+  </footer>
+</body>
+
+</html>
