@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Papa's Pizzeria - Order Online</title>
+
+    <!-- LINK ADDITIONAL FILES -->
+    <link rel="stylesheet" type="text/css" href="../styles.css">
+
+    <!-- LINK FONTS -->
+    <!-- hurricane -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Hurricane&display=swap" rel="stylesheet">
+
+    <!-- alegreya -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Alegreya+Sans:ital,wght@0,100;0,300;0,400;0,500;0,700;0,800;0,900;1,100;1,300;1,400;1,500;1,700;1,800;1,900&display=swap" rel="stylesheet">
+  </head>
+
+
+  <body>
+
+    <!-- Header is identical on all 5 pages -->
+    <header>
+      <div id="header-content-container">
+        <div id="website-title-container">
+
+          <!-- Burger Button (used on narrow devices) -->
+          <!-- button adds classes to change the styling of -->
+          <!-- elements in order to reveal the navigation menu-->
+          <div id="nav-burger"
+          onclick="this.classList.toggle('burger-to-cross');
+                  document.getElementById('nav-links-container').classList.toggle('show-menu');
+                  document.getElementById('website-title-container').classList.toggle('show-shadow');">
+            <div class="burger-bar bar1"></div>
+            <div class="burger-bar bar2"></div>
+            <div class="burger-bar bar3"></div>
+          </div>
+
+          <!-- Website Title -->
+          <h1 id="website-title"><a href="../about/">Papa's Pizzeria</a></h1>
+        </div>
+
+        <!-- Navigation Links-->
+        <nav id="nav-links-container">
+          <a href="../menu/"  >
+            <div class="nav-link">
+              <p class="nav-link-text">menu</p>
+            </div>
+          </a>
+          <a href="../order/">
+            <div class="nav-link">
+              <p class="nav-link-text">order online</p>
+            </div>
+          </a>
+          <a href="../book/">
+            <div class="nav-link">
+              <p class="nav-link-text">book a table</p>
+            </div>
+          </a>
+          <a href="../contact/">
+            <div class="nav-link">
+              <p class="nav-link-text">contact</p>
+            </div>
+          </a>
+          <a href="../about/">
+            <div class="nav-link">
+              <p class="nav-link-text">about</p>
+            </div>
+          </a>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <div class="page-heading-container">
+        <h2 class="page-heading">Order Online</h2>
+      </div>
+
+      <div class="content-blocks-container">
+        <div class="content-block">
+          <img id="pizza-img" src="../res/images/takeaway-pizza.jpg" alt="Pizza in takeaway box"/>
+          <div class="content-block-text">
+            <p>If you would like to place an order, </p>
+          </div>
+        </div>
+
+        <div class="form-container">
+          <form action="">
+            <!-- Customer Name -->
+            <div class="form-row">
+              <label for="customer-first-name" class="form-label">Name:</label>
+              <div class="form-dual-input">
+                <input id="customer-first-name" class="form-input" name="customer-first-name" type="text" placeholder="First Name" required>
+                <input id="customer-last-name" class="form-input" name="customer-last-name" type="text"  placeholder="Last Name"required>
+              </div>
+            </div>
+            
+            <!-- Customer Telephone Number -->
+            <div class="form-row">
+              <label for="customer-tel" class="form-label">Contact Number:</label>
+              <input id="customer-tel" class="form-input" name="customer-tel" type="tel" placeholder="Contact Number" required>
+            </div>
+
+            <!-- Collection or Delivery -->
+            <div class="form-row">
+              <label for="order-type" class="form-label">Order For:</label>
+              <div class="form-dual-input">
+                <div>
+                  <input id="collection" class="form-radio" name="order-type" type="radio" value="collection" checked required>
+                  <label for="collection" class="form-label">Collection</label>
+                </div>
+                <div>
+                  <input id="delivery" class="form-radio" name="order-type" type="radio" value="delivery" required>
+                  <label for="delivery" class="form-label">Delivery</label>
+                </div>
+              </div>
+              
+            </div>
+
+            <!-- Requested Time -->
+            <div class="form-row">
+              <!-- should implement a js solution to change the min and max -->
+              <!-- values for the date input to restrict the dates that are -->
+              <!-- selectable based on the current date -->
+              <label for="booking-date" class="form-label">Time:</label>
+              <div class="form-dual-input">
+                  <div>
+                    <input id="asap" class="form-radio" name="requested-time" type="radio" value="asap" checked required>
+                    <label for="asap" class="form-label">ASAP</label>
+                  </div>
+                
+                  <div>
+                    <input id="specific-time" class="form-radio" name="requested-time" type="radio" value="specific-time" required>
+                    <input id="requested-time-value" class="form-radio" name="requested-time-value" type="time" min="12:00" max="22:00" required>
+                  </div>
+                  
+              </div>
+            </div>
+            
+            <!-- Special Requests -->
+            <div class="form-row">
+              <label for="special-requests" class="form-label">Special Requests:</label>
+              <textarea id="special-requests" class="form-input" name="special-requests"></textarea>
+            </div>
+    
+            <input type="submit" value="Submit Request" class="form-submit-button">
+          </form>
+        </div>
+      </div>
+
+    </main>
+
+    <!-- Footer is identical on every page, showing a collection -->
+    <!-- of links to legal pages -->
+    <footer>
+      <div class="footer-links-container">
+        <a href="">
+          <div class="footer-link">
+            <p class="footer-link-text">customer support</p>
+          </div>
+        </a>
+        <a href="">
+          <div class="footer-link">
+            <p class="footer-link-text">privacy policy</p>
+          </div>
+        </a>
+        <a href="">
+          <div class="footer-link">
+            <p class="footer-link-text">terms of use</p>
+          </div>
+        </a>
+      </div>
+    </footer>
+  </body>
+</html>

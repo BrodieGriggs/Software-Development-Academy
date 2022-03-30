@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Papa's Pizzeria - About</title>
+
+    <!-- LINK ADDITIONAL FILES -->
+    <link rel="stylesheet" type="text/css" href="../styles.css">
+
+    <!-- LINK FONTS -->
+    <!-- hurricane -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Hurricane&display=swap" rel="stylesheet">
+
+    <!-- alegreya -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Alegreya+Sans:ital,wght@0,100;0,300;0,400;0,500;0,700;0,800;0,900;1,100;1,300;1,400;1,500;1,700;1,800;1,900&display=swap" rel="stylesheet">
+  </head>
+
+
+  <body>
+
+    <!-- Header is identical on all 5 pages -->
+    <header>
+      <div id="header-content-container">
+        <div id="website-title-container">
+
+          <!-- Burger Button (used on narrow devices) -->
+          <!-- button adds classes to change the styling of -->
+          <!-- elements in order to reveal the navigation menu-->
+          <div id="nav-burger"
+          onclick="this.classList.toggle('burger-to-cross');
+                  document.getElementById('nav-links-container').classList.toggle('show-menu');
+                  document.getElementById('website-title-container').classList.toggle('show-shadow');">
+            <div class="burger-bar bar1"></div>
+            <div class="burger-bar bar2"></div>
+            <div class="burger-bar bar3"></div>
+          </div>
+
+          <!-- Website Title -->
+          <h1 id="website-title"><a href="../about/">Papa's Pizzeria</a></h1>
+        </div>
+
+        <!-- Navigation Links-->
+        <nav id="nav-links-container">
+          <a href="../menu/"  >
+            <div class="nav-link">
+              <p class="nav-link-text">menu</p>
+            </div>
+          </a>
+          <a href="../order/">
+            <div class="nav-link">
+              <p class="nav-link-text">order online</p>
+            </div>
+          </a>
+          <a href="../book/">
+            <div class="nav-link">
+              <p class="nav-link-text">book a table</p>
+            </div>
+          </a>
+          <a href="../contact/">
+            <div class="nav-link">
+              <p class="nav-link-text">contact</p>
+            </div>
+          </a>
+          <a href="../about/">
+            <div class="nav-link">
+              <p class="nav-link-text">about</p>
+            </div>
+          </a>
+        </nav>
+      </div>
+    </header>
+
+    <!-- Page Content -->
+    <main>
+      <!-- Main Page Heading -->
+      <div class="page-heading-container">
+        <h2 class="page-heading">Our Story</h2>
+      </div>
+
+      <!-- Page Content displayed in blocks for easy resizing or -->
+      <!-- restructuring to account for different screen sizes -->
+      <div class="content-blocks-container">
+        <div class="content-block">
+          <img id="papa-img" src="../res/images/papa-profile.jpg" alt="image of 'Papa' (Papa's Pizzeria)"/>
+          
+          <div class="content-block-text">
+            <h3>Giovanni Mozzarelli - Papa!</h3>
+            <p>
+              In the south of Italy cooking starts at an early age.
+              Kids are always around mothers, aunts and grandmothers
+              while preparing food. Giovanni has fond childhood memories
+              of making pizzas with his mum and brother on the kitchen
+              table, pressing out the dough with their small fingers and
+              decorating with delicious ingredients. The way they made
+              the pizzas then is the same technique Giovanni uses at his
+              pizzeria today.
+              <br><br>
+              His food has garnered praise from many sources over the
+              years and he has continued to bring Italian culture out
+              through his food. 
+            </p>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <!-- Footer is identical on every page, showing a collection -->
+    <!-- of links to legal pages -->
+    <footer>
+      <div class="footer-links-container">
+        <a href="">
+          <div class="footer-link">
+            <p class="footer-link-text">customer support</p>
+          </div>
+        </a>
+        <a href="">
+          <div class="footer-link">
+            <p class="footer-link-text">privacy policy</p>
+          </div>
+        </a>
+        <a href="">
+          <div class="footer-link">
+            <p class="footer-link-text">terms of use</p>
+          </div>
+        </a>
+      </div>
+    </footer>
+  </body>
+</html>
