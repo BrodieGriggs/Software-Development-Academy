@@ -249,8 +249,8 @@ main {
   object-position: 50% 50%;
 }
 
-#pizza-img {
-  height: 20rem;
+.short-img {
+  height: 20rem !important;
   object-position: 50% 60%;
 }
 
