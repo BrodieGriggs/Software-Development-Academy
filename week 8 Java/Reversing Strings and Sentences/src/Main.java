@@ -1,12 +1,9 @@
 import java.util.Scanner;
 
 public class Main {
-
-	public static void main(String[] args) {
-		/* 1) Create a string called ‘sentence’ and assign
-		the value “Are you as excited as I am?” */
-		String sentence = "Are you as excited as I am?";
-		
+	
+	// method for Part 1
+	static String reverseSentence(String sentence) {
 		// Check for "?" or "!", record and remove it
 		boolean questionMark = false;
 		boolean exclamationMark = false;
@@ -43,8 +40,6 @@ public class Main {
 			it should be capitalised. Otherwise, just
 			add the lower case word. */
 			
-			System.out.println("Current word: " + currentWord);
-			
 			if(reverseSentence == null) {
 				reverseSentence = currentWord.substring(0, 1).toUpperCase() + currentWord.substring(1).toLowerCase();
 			}
@@ -63,7 +58,58 @@ public class Main {
 		if(questionMark) { reverseSentence += "?"; }
 		if(exclamationMark) { reverseSentence += "!"; }
 		
-		/* 6) Print the result to the screen. */
-		System.out.println(reverseSentence);
+		// return the new string
+		return reverseSentence;
+	}
+	
+	
+	// method for Part 2
+	static void reverseWords(String[] wordList) {
+		/* 2) Create a string called ‘reversedWord’ and
+		do not assign it a value.
+		
+		3) Similar to the above challenge, however,
+		instead of reversing a sentence, reverse the
+		order of the letters within each string. */
+		String reversedWord = "";
+		
+		// iterate through wordList
+		for(int i = 0; i < wordList.length; i++) {
+			
+			/* iterate through each char of the word
+			in reverse, adding each char to reversedWord */
+			for(int j = wordList[i].length() - 1; j >= 0; j--) {
+				
+				// first letter is capitalised
+				if(j == wordList[i].length() - 1) { reversedWord += Character.toUpperCase(wordList[i].charAt(j)); }
+				else { reversedWord += Character.toLowerCase(wordList[i].charAt(j)); }
+			}
+			
+			// Print the reversed word on screen
+			System.out.println(reversedWord);
+			
+			// reset reversedWord
+			reversedWord = "";
+		}
+	}
+	
+	public static void main(String[] args) {
+		/*
+		Part 1:
+		1) Create a string called ‘sentence’ and assign
+		the value “Are you as excited as I am?” 
+		
+		6) Print the result to the screen.
+		*/
+		System.out.println(reverseSentence("Are you as excited as I am?"));
+		
+		/*
+		Part 2:
+		1) Create an array of words called ‘wordList’ and
+		assign the values ‘Stressed’, ‘Parts’, ‘Straw’,
+		‘Keep’, ‘Wolf’.
+		 */
+		String[] wordList = {"Stressed", "Parts", "Straw", "Keep", "Wolf"};
+		reverseWords(wordList);
 	}
 }
