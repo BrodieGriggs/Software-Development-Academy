@@ -1,0 +1,3 @@
+USE library;
+
+SELECT * FROM USERS;
