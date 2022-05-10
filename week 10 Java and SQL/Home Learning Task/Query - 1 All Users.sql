@@ -1,3 +1,3 @@
 USE library;
 
-SELECT * FROM USERS;
+SELECT * FROM Users;
