@@ -8,19 +8,19 @@
 </head>
 <body>
 <header>
-  <h1>Welcome<span th:text="${user_name}"></span>!</h1>
+  <h1>Greetings<span th:text="${user_name}"></span>!</h1>
 </header>
   <main>
-    <p>Welcome to this website, created using Spring Boot.</p>
+    <p>Welcome to this website, created using Spring Boot!</p>
     <form action="">
       <input type="text" name="user_name" placeholder="Your name"/>
       <input type="submit" value="submit"/>
     </form>
 	
-	<div>
-    <p><a href="/about">About</a> Spring Boot</p>
-    <p><a href="/learn">Learn</a> Spring Boot</p>
-	</div>
+    <div>
+      <p><a href="/about">About</a> Spring Boot</p>
+      <p><a href="/learn">Learn</a> Spring Boot</p>
+    </div>
   </main>
 </body>
 </html>
