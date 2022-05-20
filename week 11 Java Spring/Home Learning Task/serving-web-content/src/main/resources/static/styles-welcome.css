@@ -1,0 +1,14 @@
+#welcome-container {
+	margin: 2rem;
+	background-color: var(--container-bright);
+	border-radius: 1rem;
+	max-width: 30rem;
+	display: grid;
+	align-items: center;
+	justify-items: center;
+}
+
+#welcome-container > h1, #welcome-container > p {
+	margin: 1rem;
+	text-align: center;
+}

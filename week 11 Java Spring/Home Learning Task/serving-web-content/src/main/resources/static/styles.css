@@ -1,0 +1,82 @@
+:root {
+	--spring-green: rgb(109,179,63);
+	--background-colour: rgb(234, 234, 234);
+	--container-bright: white;
+}
+
+body {
+	font-size: 10px;
+	font-family: Arial, sans-serif;
+	background-color: var(--background-colour)
+}
+
+#page-container {
+	display: grid;
+	align-items: center;
+	justify-items: center;
+	min-height: 95vh;
+}
+
+#content-container {
+	background-color: var(--container-bright);
+	border-radius: 1rem;
+	width: 80%;
+	max-width: 50rem;
+	display: grid;
+	align-items: center;
+	justify-items: center;
+	
+	padding: 1rem;
+}
+
+h1 {
+	font-family: 'Courgette', cursive;
+	font-size: 3rem;
+}
+
+p {
+	font-size: 1.2rem;
+}
+
+.spring-boot {
+	font-family: 'Dosis', sans-serif;
+	font-weight: 800;
+	color: var(--spring-green);
+	text-decoration: none;
+	padding: 0rem 0.5rem 0.1rem 0.5rem;
+	padding-top: -1rem;
+	border-radius: 0.5rem;
+	transition: 0.5s;
+	line-height: 1rem;
+	text-transform: lowercase;
+	
+}
+
+.spring-boot:hover {
+	background-color: var(--spring-green);
+	color: var(--container-bright);
+}
+
+.round-button {
+	background-color: var(--spring-green);
+	color: var(--container-bright);
+	border-radius: 5rem;
+	width: 50%;
+	text-decoration: none;
+	margin: 0 1rem 1rem 1rem;
+	border: 0.2rem solid var(--container-bright);
+	outline: 0rem solid var(--spring-green);
+	transition: outline 0.2s;
+}
+
+.round-button:hover {
+	outline: 0.3rem solid var(--spring-green);
+}
+
+.round-button > p{
+	margin: 0.25rem;
+	font-size: 1.75rem;
+	font-family: 'Dosis', sans-serif;
+	font-weight: 800;
+	text-align: center;
+}
