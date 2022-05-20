@@ -1,26 +1,32 @@
 <!DOCTYPE html>
 <html lang="en" xmlns:th="http://www.thymeleaf.org/">
 <head>
-  <meta charset="UTF-8"/>
-  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Greeting</title>
+  	<meta charset="UTF-8"/>
+  	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+  	<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  
+  	<link href="styles.css" rel="stylesheet"/>
+  
+  	<!-- Google Fonts -->
+  	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Courgette&family=Dosis:wght@200;300;400;500;600;700;800&display=swap" rel="stylesheet">
+  
+  	<title>Greeting</title>
 </head>
-<body>
-<header>
-  <h1>Greetings<span th:text="${user_name}"></span>!</h1>
-</header>
-  <main>
-    <p>Welcome to this website, created using Spring Boot!</p>
-    <form action="">
-      <input type="text" name="user_name" placeholder="Your name"/>
-      <input type="submit" value="submit"/>
-    </form>
+<body id="page-container">
+  	<div id="content-container">
+  	<h1>Greetings<span th:text="${user_name}"></span>!</h1>
+   		<p>Welcome to this website, created using Spring Boot!</p>
+    	<form action="">
+      		<input type="text" name="user_name" placeholder="Your name"/>
+      		<input type="submit" value="submit"/>
+    	</form>
 	
-    <div>
-      <p><a href="/about">About</a> Spring Boot</p>
-      <p><a href="/learn">Learn</a> Spring Boot</p>
-    </div>
-  </main>
+    	<div>
+      		<p><a href="/about">About</a> Spring Boot</p>
+      		<p><a href="/learn">Learn</a> Spring Boot</p>
+    	</div>
+  	</div>
 </body>
 </html>

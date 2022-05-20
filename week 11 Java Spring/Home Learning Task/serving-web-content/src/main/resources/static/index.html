@@ -3,8 +3,26 @@
 <head> 
     <title>Getting Started: Serving Web Content</title> 
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    
+    <link href="styles.css" rel="stylesheet"/>
+    <link href="styles-welcome.css" rel="stylesheet"/>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Courgette&family=Dosis:wght@200;300;400;500;600;700;800&display=swap" rel="stylesheet">
 </head>
-<body>
-    <p>Get your greeting <a href="/greeting">here</a></p>
+<body id="page-container">
+	<div id="welcome-container">
+		<h1>Welcome!</h1>
+    	<p>
+	    	This spicy little website has been created using
+	    	<a class="spring-boot"href="https://spring.io/projects/spring-boot">Spring Boot</a>
+	    	Get your personalised greeting
+    	</p>
+    	<a href="/greeting" class="round-button">
+    		<p>here!</p>
+    	</a>
+	</div>
 </body>
 </html>

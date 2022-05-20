@@ -1,16 +1,22 @@
 <!DOCTYPE html>
 <html lang="en" xmlns:th="http://www.thymeleaf.org/">
 <head>
-  <meta charset="UTF-8"/>
-  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Learn Spring Boot</title>
+  	<meta charset="UTF-8"/>
+  	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+  	<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  
+  	<link href="styles.css" rel="stylesheet"/>
+  
+  	<!-- Google Fonts -->
+  	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Courgette&family=Dosis:wght@200;300;400;500;600;700;800&display=swap" rel="stylesheet">
+  
+  	<title>Learn Spring Boot</title>
 </head>
-<body>
-<header>
-  <h1>Learn Spring Boot</h1>
-</header>
-  <main>
+<body id="page-container">
+  <div id="content-container">
+  	<h1>Learn Spring Boot</h1>
     <p>
       Spring Boot can be weird to learn if you haven't encountered MVC
       (Models Views Controllers) application structures before,
@@ -35,9 +41,9 @@
     </p>
     
     <div>
-      <p><a href="/greeting">Back</a> to the greeting page</p>
       <p><a href="/about">About</a> Spring Boot</p>
+      <p><a href="/greeting">Back</a> to the greeting page</p>
     </div>
-  </main>
+  </div>
 </body>
 </html>
