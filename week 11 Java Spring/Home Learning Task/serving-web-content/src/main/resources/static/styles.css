@@ -38,6 +38,10 @@ p {
 	font-size: 1.2rem;
 }
 
+li {
+	font-size: 1.0rem;
+}
+
 .spring-boot {
 	font-family: 'Dosis', sans-serif;
 	font-weight: 800;
