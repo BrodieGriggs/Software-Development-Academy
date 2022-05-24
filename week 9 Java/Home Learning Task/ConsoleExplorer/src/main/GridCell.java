@@ -1,3 +1,4 @@
+package main;
 
 public class GridCell {
 	private String cellType;

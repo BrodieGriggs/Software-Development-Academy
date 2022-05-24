@@ -1,4 +1,6 @@
 eclipse.preferences.version=1
-encoding//src/Main.java=UTF-8
-encoding//src/Map.java=UTF-8
-encoding//src/Player.java=UTF-8
+encoding//src/main/Main.java=UTF-8
+encoding//src/main/Map.java=UTF-8
+encoding//src/main/Player.java=UTF-8
+encoding//src/unitTesting/GridCell/GridCell_Constructor_Tests.java=UTF-8
+encoding//src/unitTesting/Main/Main_showInfo_Tests.java=UTF-8
