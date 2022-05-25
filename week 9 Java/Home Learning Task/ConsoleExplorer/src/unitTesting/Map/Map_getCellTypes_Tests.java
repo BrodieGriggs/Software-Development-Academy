@@ -11,7 +11,7 @@ import main.Map;
 public class Map_getCellTypes_Tests {
 
 	@Test
-	public void test() {
+	public void getCellTypes_ValueValidation() {
 		
 		// the following values are initialised by default in the Map constructor:
 		HashMap<String, String> cellTypes = new HashMap<String, String>();

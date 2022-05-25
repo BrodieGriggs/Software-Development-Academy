@@ -11,6 +11,7 @@ public class Map {
 	private int gridHeight;
 	
 	private int[] treasureLocation;
+
 	private boolean powerUpPresent = false;
 	private int[] powerUpLocation;
 	
@@ -227,5 +228,25 @@ public class Map {
 			"[X]                        [X]\n" +
 			"[X][X][X][X][X][X][X][X][X][X]"
 		);
+	}
+	
+	public GridCell[][] getGrid() {
+		return grid;
+	}
+
+	public void setGrid(GridCell[][] grid) {
+		this.grid = grid;
+	}
+
+	public void setTreasureLocation(int[] treasureLocation) {
+		this.treasureLocation = treasureLocation;
+	}
+
+	public void setPowerUpPresent(boolean powerUpPresent) {
+		this.powerUpPresent = powerUpPresent;
+	}
+
+	public void setPowerUpLocation(int[] powerUpLocation) {
+		this.powerUpLocation = powerUpLocation;
 	}
 }
