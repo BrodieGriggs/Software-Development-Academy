@@ -7,7 +7,6 @@ import org.junit.Test;
 import main.GridCell;
 
 public class GridCell_copy_Tests {
-	
 	@Test
 	public void testCopy() {
 		/* the class GridCell has only 2 variables,

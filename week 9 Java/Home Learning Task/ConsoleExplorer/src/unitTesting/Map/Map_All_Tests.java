@@ -7,6 +7,7 @@ import org.junit.runners.Suite.SuiteClasses;
 @RunWith(Suite.class)
 @SuiteClasses({
 	Map_Constructor_Tests.class,
+	Map_getCellTypes_Tests.class,
 	Map_populateGrid_Tests.class,
 	Map_getTreasureLocation_Tests.class,
 	Map_isPowerUpPresent_Tests.class,

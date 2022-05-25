@@ -17,6 +17,10 @@ public class Map {
 	// HashMap to hold different types of cell and their appearance
 	private HashMap<String, String> cellTypes = new HashMap<String, String>();
 	
+	public HashMap<String, String> getCellTypes() {
+		return cellTypes;
+	}
+
 	// Constructor
 	public Map(int gridWidth, int gridHeight) {
 		// assign size variables

@@ -8,16 +8,12 @@ import org.junit.Test;
 
 import main.Map;
 
-public class Map_Constructor_Tests {
+public class Map_getCellTypes_Tests {
 
 	@Test
-	public void variableAssignment() {
+	public void test() {
 		
-		int testX = 5;
-		int testY = 10;
-		
-		Map testMap = new Map(testX, testY);
-		
+		// the following values are initialised by default in the Map constructor:
 		HashMap<String, String> cellTypes = new HashMap<String, String>();
 		cellTypes.put("hidden", "███");
 		cellTypes.put("border", "[X]");
@@ -25,16 +21,13 @@ public class Map_Constructor_Tests {
 		cellTypes.put("player", "(P)");
 		cellTypes.put("treasure", "(T)");
 		cellTypes.put("powerup", "(+)");
+
+		Map testMap = new Map(5, 5);
 		
-		// check gridWidth assignment
-		assertEquals(testX, testMap.getDimensions()[0]);
-		
-		// check gridHeight assignment
-		assertEquals(testY, testMap.getDimensions()[1]);
-		
-		// check each cellType value has been assigned
+		// check getter gets correct value
 		for(var entry : cellTypes.entrySet()) {
 			assertEquals(cellTypes.get(entry.getKey()), testMap.getCellTypes().get(entry.getKey()));
 		}
 	}
+
 }
